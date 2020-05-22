@@ -8,6 +8,11 @@ class Counter extends React.Component {
     };
   }
 
+  // if you don't want to use a constructor,
+  // state = {
+  //  count: this.props.count,
+  // };
+
   onIncrementClick = () => {
     this.setState({ count: this.state.count + 1});
   };
