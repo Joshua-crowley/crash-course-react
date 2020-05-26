@@ -15,11 +15,13 @@ class Counter extends React.Component {
 
   onIncrementClick = () => {
     this.setState({ count: this.state.count + 1});
+    setTimeout(() => this.props.onUpdate(this.state.count), 0);
   };
 
   onDecrementClick = () => {
     if (this.state.count) {
       this.setState({ count: this.state.count - 1});
+      setTimeout(() => this.props.onUpdate(this.state.count), 0);
     }
   }
 
